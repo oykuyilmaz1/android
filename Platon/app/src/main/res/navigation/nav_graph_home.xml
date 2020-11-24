@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cmpe451.platon.page.fragment.home.view.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.cmpe451.platon.page.fragment.profilepage.view.ProfilePageFragment"
+        android:label="Your Profile" >
+        <action
+            android:id="@+id/action_profilePageFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_followFragment"
+            app:destination="@id/followFragment" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_followerFragment"
+            app:destination="@id/followerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.cmpe451.platon.page.fragment.editprofile.view.EditProfileFragment"
+        android:label="EditProfileFragment" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followFragment"
+        android:name="com.cmpe451.platon.page.fragment.follow.view.FollowFragment"
+        android:label="FollowFragment" >
+        <action
+            android:id="@+id/action_followFragment_to_otherProfileFragment"
+            app:destination="@id/otherProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherProfileFragment"
+        android:name="com.cmpe451.platon.page.fragment.otherprofile.view.OtherProfileFragment"
+        android:label="OtherProfileFragment" >
+        <action
+            android:id="@+id/action_otherProfileFragment_to_followFragment2"
+            app:destination="@id/followFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followerFragment"
+        android:name="com.cmpe451.platon.page.fragment.follow.view.FollowerFragment"
+        android:label="FollowerFragment" >
+        <action
+            android:id="@+id/action_followerFragment_to_otherProfileFragment"
+            app:destination="@id/otherProfileFragment" />
+    </fragment>
+</navigation>
